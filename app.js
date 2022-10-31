@@ -1,8 +1,8 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-canvas.width = 1800;
-canvas.height = 600;
+canvas.width = 1000;
+canvas.height = 500;
 
 const cw = canvas.width;
 const ch = canvas.height;
@@ -31,7 +31,6 @@ let cars = [];
 
 function startCarPosition() {
     for (let i = 0; i <= cars.length; i++) {
-
         let randNum = parseInt(Math.random() * cw - carVelocity);
         carX.push(randNum);
     }
@@ -40,7 +39,6 @@ function startCarPosition() {
 function carsRender() {
 
     for (let i = 0; i <= cars.length; i++) {
-
         const img = new Image();
 
         img.src = `img/car${i + 1}.png`;
@@ -80,7 +78,6 @@ function tabel() {
     ctx.fillRect(0, 410, cw, lineHeight);
 
     for (let linePosition = 10; linePosition < cw; linePosition += 30) {
-
         ctx.fillStyle = 'white';
         ctx.fillRect(linePosition, 150, lineWidth, lineHeight);
         ctx.fillRect(linePosition, 215, lineWidth, lineHeight);
